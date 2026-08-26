@@ -1,11 +1,12 @@
-```css
 /* =========================================
    PORTFOLIO HIKMAH
-   Simple • Clean • Modern • Aesthetic
-   ========================================= */
+   Pastel Blue • Cute • Clean • Modern
+========================================= */
 
 
-/* ---------- RESET ---------- */
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -19,71 +20,110 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7fbff;
-    color: #29445f;
-    line-height: 1.6;
+    background: #f8fcff;
+    color: #304b63;
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
 
-/* =========================================
+/* =========================
+   WARNA
+========================= */
+
+/*
+   Biru pastel utama : #a9d8f5
+   Biru muda         : #dff3ff
+   Biru              : #73b6df
+   Navy lembut       : #304b63
+   Background        : #f8fcff
+*/
+
+
+/* =========================
    NAVBAR
-   ========================================= */
+========================= */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.94);
 
-    box-shadow: 0 2px 15px rgba(80, 130, 180, 0.08);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5f3fb;
+
+    box-shadow: 0 3px 20px rgba(100, 160, 200, 0.08);
 }
 
 .navbar {
     max-width: 1100px;
     margin: auto;
 
-    padding: 18px 25px;
+    padding: 17px 25px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
+    color: #6caed7;
     font-size: 25px;
-    color: #6daedb;
-    font-weight: 700;
+    font-weight: bold;
+
+    position: relative;
+}
+
+/* Bintang kecil di logo */
+.logo::after {
+    content: "✦";
+
+    color: #9ccfea;
+    font-size: 12px;
+
+    position: absolute;
+    top: -8px;
+    right: -13px;
+
+    animation: sparkle 2s infinite;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 25px;
+
     list-style: none;
 }
 
 .nav-links a {
+    color: #61788c;
+
     text-decoration: none;
-    color: #5c7185;
+
     font-size: 14px;
+    font-weight: 500;
 
     transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #6daedb;
+    color: #69acd7;
 }
 
 
-/* =========================================
-   HOME / HERO
-   ========================================= */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     max-width: 1100px;
     min-height: 90vh;
 
     margin: auto;
+
     padding: 80px 25px;
 
     display: flex;
@@ -91,14 +131,60 @@ header {
     justify-content: space-between;
 
     gap: 60px;
+
+    position: relative;
 }
+
+
+/* Dekorasi bubble kecil */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    background: #e1f4ff;
+
+    border-radius: 50%;
+
+    top: 80px;
+    left: -40px;
+
+    opacity: 0.7;
+
+    z-index: -1;
+}
+
+.hero::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: #a8d9f4;
+
+    font-size: 30px;
+
+    right: 40px;
+    top: 120px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
 
 .hero-text {
     max-width: 600px;
 }
 
 .hello {
-    color: #72b1dc;
+    color: #70b3dc;
+
     font-size: 16px;
     font-weight: bold;
 
@@ -106,16 +192,16 @@ header {
 }
 
 .hero h1 {
+    color: #304b63;
+
     font-size: 48px;
     line-height: 1.2;
-
-    color: #29445f;
 
     margin-bottom: 20px;
 }
 
 .hero-text > p:not(.hello) {
-    color: #6f8192;
+    color: #718595;
 
     max-width: 520px;
 
@@ -123,35 +209,44 @@ header {
 }
 
 
-/* ---------- BUTTON ---------- */
+/* =========================
+   BUTTON
+========================= */
 
 .btn {
     display: inline-block;
 
-    padding: 12px 26px;
+    padding: 12px 27px;
 
-    background: #a8d5f2;
-    color: #29445f;
+    background: #a9d8f5;
 
-    border-radius: 25px;
+    color: #31516b;
+
+    border-radius: 30px;
 
     text-decoration: none;
-    font-weight: 600;
+
+    font-weight: bold;
 
     transition: 0.3s ease;
+
+    box-shadow: 0 6px 15px rgba(120, 185, 220, 0.15);
 }
 
 .btn:hover {
-    background: #7eb9df;
+    background: #76b9df;
+
     color: white;
 
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 
-    box-shadow: 0 8px 20px rgba(126, 185, 223, 0.25);
+    box-shadow: 0 10px 22px rgba(100, 170, 215, 0.25);
 }
 
 
-/* ---------- FOTO ---------- */
+/* =========================
+   FOTO
+========================= */
 
 .hero-photo {
     width: 290px;
@@ -159,12 +254,18 @@ header {
 
     padding: 9px;
 
-    background: #dceffb;
+    background: #dff3ff;
+
+    border: 5px solid #ffffff;
 
     border-radius: 50%;
 
     box-shadow:
-        0 15px 35px rgba(92, 157, 200, 0.15);
+        0 15px 35px rgba(100, 170, 215, 0.18);
+
+    position: relative;
+
+    animation: floating 4s ease-in-out infinite;
 }
 
 .hero-photo img {
@@ -177,9 +278,42 @@ header {
 }
 
 
-/* =========================================
-   GENERAL SECTION
-   ========================================= */
+/* Bintang kecil di dekat foto */
+
+.hero-photo::before {
+    content: "✦";
+
+    position: absolute;
+
+    color: #76b9df;
+
+    font-size: 27px;
+
+    top: 5px;
+    right: -18px;
+
+    animation: sparkle 2s infinite;
+}
+
+.hero-photo::after {
+    content: "♡";
+
+    position: absolute;
+
+    color: #9ccfe9;
+
+    font-size: 24px;
+
+    bottom: 20px;
+    left: -20px;
+
+    animation: floating 3s infinite;
+}
+
+
+/* =========================
+   SECTION
+========================= */
 
 .section {
     max-width: 1100px;
@@ -196,24 +330,24 @@ header {
 }
 
 .section-title p {
-    color: #72b1dc;
+    color: #72b3dc;
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: bold;
 
     margin-bottom: 5px;
 }
 
 .section-title h2 {
-    color: #29445f;
+    color: #304b63;
 
     font-size: 32px;
 }
 
 
-/* =========================================
-   ABOUT ME
-   ========================================= */
+/* =========================
+   ABOUT
+========================= */
 
 .about-content {
     display: grid;
@@ -225,56 +359,103 @@ header {
 
 .about-text,
 .education {
-    background: white;
+    background: #ffffff;
 
     padding: 30px;
 
-    border-radius: 18px;
+    border-radius: 20px;
+
+    border: 1px solid #e6f4fb;
 
     box-shadow:
-        0 8px 25px rgba(80, 130, 180, 0.08);
+        0 8px 25px rgba(90, 150, 190, 0.07);
 
     transition: 0.3s ease;
+
+    position: relative;
 }
 
 .about-text:hover,
 .education:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 12px 30px rgba(80, 130, 180, 0.12);
+        0 14px 30px rgba(90, 150, 190, 0.12);
+}
+
+
+/* Dekorasi kecil card */
+
+.about-text::after {
+    content: "☁";
+
+    position: absolute;
+
+    color: #d5edf9;
+
+    font-size: 35px;
+
+    right: 20px;
+    top: 10px;
+}
+
+.education::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: #c2e6f7;
+
+    font-size: 22px;
+
+    right: 20px;
+    top: 15px;
 }
 
 .about-text h3,
 .education h3 {
-    color: #3b5d78;
+    color: #3c607b;
 
     margin-bottom: 18px;
 }
 
 .about-text p {
-    color: #718393;
+    color: #728596;
 
     margin-bottom: 15px;
 }
 
 
-/* ---------- HOBBY ---------- */
+/* =========================
+   HOBBY
+========================= */
 
 .hobby {
-    background: #eef8ff;
+    background: #eef9ff;
+
+    border: 1px solid #e0f2fc;
 
     padding: 10px 15px;
 
-    border-radius: 9px;
+    border-radius: 10px;
 
     margin-top: 12px;
 
-    color: #59768e;
+    color: #5d778d;
+
+    transition: 0.3s ease;
+}
+
+.hobby:hover {
+    background: #e1f4ff;
+
+    transform: translateX(4px);
 }
 
 
-/* ---------- EDUCATION ---------- */
+/* =========================
+   EDUCATION
+========================= */
 
 .education-item {
     display: flex;
@@ -287,37 +468,69 @@ header {
 }
 
 .education-item span {
-    min-width: 50px;
+    min-width: 52px;
 
     padding: 5px 9px;
 
-    background: #dceffb;
+    background: #dff3ff;
 
-    color: #528ab3;
+    color: #548eb5;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     text-align: center;
 
-    font-size: 12px;
+    font-size: 11px;
+
     font-weight: bold;
 }
 
 .education-item p {
-    color: #718393;
+    color: #718595;
 
     font-size: 14px;
 }
 
 
-/* =========================================
+/* =========================
    SKILLS
-   ========================================= */
+========================= */
 
 .skills-section {
     max-width: 100%;
 
-    background: #eef8ff;
+    background: #edf8fe;
+
+    position: relative;
+}
+
+
+/* Dekorasi background */
+
+.skills-section::before {
+    content: "✦";
+
+    position: absolute;
+
+    color: #c7e9f8;
+
+    font-size: 35px;
+
+    left: 8%;
+    top: 70px;
+}
+
+.skills-section::after {
+    content: "♡";
+
+    position: absolute;
+
+    color: #c7e9f8;
+
+    font-size: 28px;
+
+    right: 8%;
+    bottom: 60px;
 }
 
 .skills-section .section-title,
@@ -334,42 +547,64 @@ header {
     grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
+
+    position: relative;
+    z-index: 2;
 }
 
 
-/* ---------- SKILL CARD ---------- */
+/* =========================
+   SKILL CARD
+========================= */
 
 .skill-card {
     background: white;
 
     padding: 30px 20px;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
     text-align: center;
 
+    border: 1px solid #e3f3fb;
+
     transition: 0.3s ease;
+
+    position: relative;
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-9px) rotate(1deg);
 
     box-shadow:
-        0 12px 28px rgba(80, 130, 180, 0.12);
+        0 14px 28px rgba(90, 150, 190, 0.13);
 }
 
 
-/* ---------- SKILL ICON ---------- */
+/* Little heart */
+
+.skill-card::after {
+    content: "♡";
+
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    color: #b8dff1;
+
+    font-size: 16px;
+}
 
 .skill-icon {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
 
     margin: 0 auto 15px;
 
-    background: #dceffb;
+    background: #dff3ff;
 
-    color: #5892bb;
+    color: #5b9bc4;
 
     border-radius: 50%;
 
@@ -379,6 +614,12 @@ header {
 
     font-size: 20px;
     font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1) rotate(8deg);
 }
 
 .skill-card h3 {
@@ -390,15 +631,15 @@ header {
 }
 
 .skill-card p {
-    color: #778897;
+    color: #788b9a;
 
     font-size: 13px;
 }
 
 
-/* =========================================
+/* =========================
    PROJECTS
-   ========================================= */
+========================= */
 
 .projects-container {
     display: grid;
@@ -408,27 +649,63 @@ header {
     gap: 25px;
 }
 
-
-/* ---------- PROJECT CARD ---------- */
-
 .project-card {
     background: white;
 
     padding: 30px;
 
-    border-radius: 18px;
+    border-radius: 20px;
+
+    border: 1px solid #e5f3fb;
 
     box-shadow:
-        0 8px 25px rgba(80, 130, 180, 0.08);
+        0 8px 25px rgba(90, 150, 190, 0.07);
 
     transition: 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
 .project-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
 
     box-shadow:
-        0 15px 30px rgba(80, 130, 180, 0.13);
+        0 15px 30px rgba(90, 150, 190, 0.13);
+}
+
+
+/* Garis biru di atas card */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #a9d8f5;
+}
+
+
+/* Dekorasi */
+
+.project-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    right: 20px;
+    top: 18px;
+
+    color: #c3e6f6;
+
+    font-size: 18px;
 }
 
 .project-number {
@@ -457,7 +734,9 @@ header {
 }
 
 
-/* ---------- PROJECT TOOLS ---------- */
+/* =========================
+   TOOLS
+========================= */
 
 .tools {
     display: flex;
@@ -470,22 +749,32 @@ header {
 }
 
 .tools span {
-    background: #eef8ff;
+    background: #edf8fe;
 
-    color: #558cb5;
+    color: #568db3;
 
-    padding: 5px 9px;
+    padding: 5px 10px;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
     font-size: 11px;
+
+    transition: 0.3s ease;
+}
+
+.tools span:hover {
+    background: #dff3ff;
+
+    transform: translateY(-2px);
 }
 
 
-/* ---------- PROJECT LINK ---------- */
+/* =========================
+   PROJECT LINK
+========================= */
 
 .project-link {
-    color: #66a5d0;
+    color: #69a9d2;
 
     text-decoration: none;
 
@@ -497,16 +786,20 @@ header {
 }
 
 .project-link:hover {
-    color: #3f83b3;
+    color: #3e82af;
+
+    padding-left: 5px;
 }
 
 
-/* =========================================
+/* =========================
    CONTACT
-   ========================================= */
+========================= */
 
 .contact-section {
     text-align: center;
+
+    position: relative;
 }
 
 .contact-container {
@@ -516,7 +809,7 @@ header {
 }
 
 .contact-container > p {
-    color: #718393;
+    color: #718595;
 
     margin-bottom: 30px;
 }
@@ -539,22 +832,26 @@ header {
 
     padding: 17px 20px;
 
-    border-radius: 12px;
+    border-radius: 13px;
 
     color: #3b5d78;
 
     text-decoration: none;
 
+    border: 1px solid #e6f4fb;
+
     box-shadow:
-        0 5px 18px rgba(80, 130, 180, 0.07);
+        0 5px 18px rgba(90, 150, 190, 0.06);
 
     transition: 0.3s ease;
 }
 
 .contact-list a:hover {
-    transform: translateX(5px);
+    transform: translateX(6px);
 
-    background: #eef8ff;
+    background: #edf8fe;
+
+    border-color: #cceaf8;
 }
 
 .contact-list span {
@@ -564,12 +861,12 @@ header {
 }
 
 
-/* =========================================
+/* =========================
    FOOTER
-   ========================================= */
+========================= */
 
 footer {
-    background: #e2f2fc;
+    background: #e1f2fc;
 
     padding: 25px;
 
@@ -578,12 +875,29 @@ footer {
     color: #68849a;
 
     font-size: 13px;
+
+    position: relative;
 }
 
 
-/* =========================================
-   FADE-IN ANIMATION
-   ========================================= */
+/* Dekorasi footer */
+
+footer::before {
+    content: "♡  ✦  ♡";
+
+    display: block;
+
+    color: #9ccde7;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   FADE IN
+========================= */
 
 .fade-in {
     animation: fadeIn 1s ease;
@@ -593,21 +907,55 @@ footer {
 
     from {
         opacity: 0;
-
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 }
 
 
-/* =========================================
+/* =========================
+   FLOATING
+========================= */
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================
+   SPARKLE
+========================= */
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================
    TABLET
-   ========================================= */
+========================= */
 
 @media (max-width: 850px) {
 
@@ -641,13 +989,13 @@ footer {
 }
 
 
-/* =========================================
-   HP / MOBILE
-   ========================================= */
+/* =========================
+   HP
+========================= */
 
 @media (max-width: 600px) {
 
-    /* NAVBAR */
+    /* Navbar */
 
     .navbar {
         flex-direction: column;
@@ -670,7 +1018,7 @@ footer {
     }
 
 
-    /* HERO */
+    /* Hero */
 
     .hero {
         min-height: auto;
@@ -687,8 +1035,15 @@ footer {
         font-size: 32px;
     }
 
+    .hero::before {
+        width: 60px;
+        height: 60px;
 
-    /* SECTION */
+        left: -20px;
+    }
+
+
+    /* Section */
 
     .section {
         padding: 65px 20px;
@@ -699,19 +1054,26 @@ footer {
     }
 
 
-    /* SKILLS */
+    /* Skills */
 
     .skills-container {
         grid-template-columns: 1fr;
     }
 
 
-    /* CONTACT */
+    /* Contact */
 
     .contact-list a {
         flex-direction: column;
 
         gap: 5px;
     }
+
+
+    /* Hide some decoration on small screen */
+
+    .skills-section::before,
+    .skills-section::after {
+        display: none;
+    }
 }
-```
